@@ -10,8 +10,9 @@
   },
   "license": "MIT",
   "scripts":{
-    "test": "jest --watch fanOut.test.js --colors --outputFile=results --json",
-    "results": "jest --colors --outputFile=results.json --json"
+    "test": "jest --watchAll --colors",
+    "complete": "jest --outputFile=results.json --json"
+
   },
   "devDependencies": {
     "jest": "^23.4.2"
