@@ -22,7 +22,7 @@ or you can install with Brew
 	git clone https://github.com/hot-sushi/js-coding-challenge.git
 
 
-#### Install dependencies with NPM
+#### Install dependencies with Yarn (See below for more about yarn)
 From within the project directory
 
 	yarn install
@@ -33,3 +33,7 @@ From within the project directory
 
 
 #### GOOD LUCK
+
+Core Dependencies
+[YARN](https://yarnpkg.com/en/) /
+[JEST](https://jestjs.io/)
