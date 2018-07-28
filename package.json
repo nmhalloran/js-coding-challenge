@@ -1,0 +1,19 @@
+{
+  "name": "js-coding-challenge",
+  "version": "1.0.0",
+  "description": "A Modern Javascript coding challenge inspired from ssando's implementation - TuneIn Engineering",
+  "main": "main.js",
+  "repository": "https://github.com/hot-sushi/js-coding-challenge.git",
+  "author": "joortiz <joortiz@adobe.com>",
+  "jest":{
+    "testURL":"http://localhost/"
+  },
+  "license": "MIT",
+  "scripts":{
+    "test": "jest --watch fanOut.test.js --colors --outputFile=results --json",
+    "results": "jest --colors --outputFile=results --json"
+  },
+  "devDependencies": {
+    "jest": "^23.4.2"
+  }
+}
