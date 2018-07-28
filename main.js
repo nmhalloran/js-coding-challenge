@@ -18,11 +18,8 @@ var api = {};
 */
 
 api.fanOut = (input, fn) => {
-  const output = [];
-  for (var i = 0; i < input.length; i++) {
-    output.push(fn(input[i]));
-  }
-  return output;
+// TODO: your implementation here.
+return [];
 }
 
 /*
@@ -46,10 +43,8 @@ api.fanOut = (input, fn) => {
  */
 
 api.funnel = (input, fn, startValue) => {
-  for(var i = 0; i < input.length; i++) {
-    var output = startValue += input[i];
-  }
-  return output;
+// TODO: your implementation here.
+  return 0;
 }
 
 /*
@@ -72,12 +67,8 @@ api.funnel = (input, fn, startValue) => {
  */
 
 api.distill = (input, fn) => {
-  var output = [];
-  for(var i = 0; i < input.length; i++) {
-    var currNum = fn(input[i]);
-    currNum ? output.push(input[i]) : false;
-  }
-  return output;
+// TODO: your implementation here.
+  return [];
 }
 
 /*
@@ -97,14 +88,8 @@ CAVEATS:
  */
 
 api.numOfChars = (input) => {
-
-  var counter = 0;
-  var output = [];
-  for (var i = 0; i < input.length; i++) {
-    var keeper = input[i].length;
-    counter += keeper
-  }
-  return counter;
+// TODO: your implementation here.
+  return 0;
 }
 
 
@@ -126,17 +111,8 @@ api.numOfChars = (input) => {
  */
 
 api.numOfCertainChars = (input, c) => {
-  var occurr = 0;
-  var target = c;
-  for(var i = 0; i < input.length; i ++){
-    var wordString = input[i];
-    for(var x = 0; x < wordString.length; x ++){
-      var currChar = wordString[x];
-      if(currChar === c)
-      occurr += 1;
-    }
-  }
-  return occurr;
+// TODO: your implementation here.
+  return 0;
 }
 
 module.exports = api;
