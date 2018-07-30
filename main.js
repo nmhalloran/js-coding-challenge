@@ -18,9 +18,13 @@ var api = {};
 */
 
 api.fanOut = (input, fn) => {
-// TODO: your implementation here.
-return [];
-}
+  // TODO: your implementation here.
+  new_array = [];
+  for (let i = 0; i < input.length; i++) {
+    new_array.push(fn(input[i]));
+  }
+  return new_array;
+};
 
 /*
  STEP 2:  Implement funnel.
@@ -43,9 +47,13 @@ return [];
  */
 
 api.funnel = (input, fn, startValue) => {
-// TODO: your implementation here.
-  return 0;
-}
+  // TODO: your implementation here.
+  let total = startValue;
+  for (let i = 0; i < input.length; i++) {
+    total = fn(total, input[i]);
+  }
+  return total;
+};
 
 /*
  STEP 3:  Implement distill. Glad you made it here... Are you feeling the same?
@@ -67,9 +75,13 @@ api.funnel = (input, fn, startValue) => {
  */
 
 api.distill = (input, fn) => {
-// TODO: your implementation here.
-  return [];
-}
+  // TODO: your implementation here.
+  let newInput = [];
+  for (let i = 0; i < input.length; i++) {
+    if (fn(input[i]) === true) newInput.push(input[i]);
+  }
+  return newInput;
+};
 
 /*
 STEP 4: Implement numOfChars.
@@ -87,11 +99,13 @@ CAVEATS:
  - You may not use any external libraries
  */
 
-api.numOfChars = (input) => {
-// TODO: your implementation here.
-  return 0;
-}
-
+api.numOfChars = input => {
+  // TODO: your implementation here.
+  let dup = Object.create(input);
+  let comboString = dup.shift();
+  comboString = api.funnel(dup, config.combineIt, comboString);
+  return comboString.length;
+};
 
 /*
  STEP 5: Implement numOfCertainChars.
@@ -111,8 +125,15 @@ api.numOfChars = (input) => {
  */
 
 api.numOfCertainChars = (input, c) => {
-// TODO: your implementation here.
-  return 0;
-}
+  // TODO: your implementation here.
+  let sum = 0;
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < input[i].length; j++) {
+      console.log(input[i][j]);
+      if (input[i][j] === c) sum += 1;
+    }
+  }
+  return sum;
+};
 
 module.exports = api;
